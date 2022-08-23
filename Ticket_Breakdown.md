@@ -17,22 +17,24 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ## Your Breakdown Here
 
+Considerations: Task estimation includes unit test cases too.
+
 - Add custom id column in agents db table, for custom id to internal id mapping
- Acceptance criteria:
- Estimate:
- Implementation details:
+ Acceptance criteria: Agent table should have a new column with the title as 'CID'
+ Estimate: 1
 
+Guess: Either we can update the existing api of report generation or create a new api for the same
 - Create an api to generate the report with custom agent id
- Acceptance criteria:
- Estimate:
- Implementation details:
-
+ Acceptance criteria: 
+ Estimate: 3
+=
 - Add custom id field on agent onboarding screen and edit agent pages
- Acceptance criteria:
- Estimate:
- Implementation details:
+ Acceptance criteria: Add an input field on the below screens: 
+ 1. Agent onboarding screen 
+ 2. Edit agent details screen
+ Estimate:1
 
+Guess: if any agent onboarding api is present, then the below task should be create
 - Update saveAgentDetail api to add custom id field in the payload
- Acceptance criteria:
- Estimate:
- Implementation details:
+ Acceptance criteria: saveAgentDetails should accept a custom ID field in the payload
+ Estimate: 1
