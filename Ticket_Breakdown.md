@@ -17,3 +17,22 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ## Your Breakdown Here
 
+- Add custom id column in agents db table, for custom id to internal id mapping
+ Acceptance criteria:
+ Estimate:
+ Implementation details:
+
+- Create an api to generate the report with custom agent id
+ Acceptance criteria:
+ Estimate:
+ Implementation details:
+
+- Add custom id field on agent onboarding screen and edit agent pages
+ Acceptance criteria:
+ Estimate:
+ Implementation details:
+
+- Update saveAgentDetail api to add custom id field in the payload
+ Acceptance criteria:
+ Estimate:
+ Implementation details:
