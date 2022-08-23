@@ -9,19 +9,15 @@ exports.deterministicPartitionKey = (event) => {
     crypto.createHash("sha3-512").update(val).digest("hex");
 
   if (event) {
-    if (event.partitionKey) {
-      candidate =
-        typeof candidate !== "string"
-          ? JSON.stringify(candidate)
-          : event.partitionKey;
-    } else {
-      const data = JSON.stringify(event);
-      candidate = getHash(data);
-    }
+    if (event.partitionKey) candidate = event.partitionKey;
+    else candidate = getHash(JSON.stringify(event));
+
+    if (typeof candidate !== "string") candidate = JSON.stringify(candidate);
 
     return candidate.length > MAX_PARTITION_KEY_LENGTH
-      ? (candidate = getHash(candidate))
+      ? getHash(candidate)
       : candidate;
   }
+
   return TRIVIAL_PARTITION_KEY;
 };

@@ -9,3 +9,8 @@ You've been asked to refactor the function `deterministicPartitionKey` in [`dpk.
 You will be graded on the exhaustiveness and quality of your unit tests, the depth of your refactor, and the level of insight into your thought process provided by the written explanation.
 
 ## Your Explanation Here
+
+Instead of multiple peer conditions, keep only one condition as a parent so that the comparison doesn't waste the time and which increases the readability in the sense of if the parent condition fails, need not to read other conditions at a time, with the given parameter.
+Instead of repeating the createHash method chain, moved the repetitive code into a function, to increase the modularization.
+Incorporated multiple one liner conditions into ternary conditions.
+Removed unnecessary temporary variables if are used only once, considering the line is not very big to read carefully
